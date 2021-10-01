@@ -1,0 +1,91 @@
+vpype read skyscrapers.svg splitall linesimplify --tolerance 0.3mm reloop --tolerance 0.3mm linemerge --tolerance 0.3mm linesort layout --landscape a4 write output.svg show
+vpype read skyscrapers.svg splitall linesimplify --tolerance 0.3mm reloop --tolerance 0.3mm linemerge --tolerance 0.3mm linesort layout --landscape a4 write output.svg show
+vpype read skyscrapers.svg splitall reloop --tolerance 0.3mm linemerge --tolerance 0.3mm linesort layout --landscape a4 write output.svg show
+vpype read skyscrapers.svg splitall linemerge --tolerance 0.3mm linesort layout --landscape a4 write output.svg show
+vpype read skyscrapers.svg layout --landscape a4 write output.svg show
+vpype read skyscrapers.svg splitall linesimplify --tolerance 0.3mm reloop --tolerance 0.3mm linemerge --tolerance 0.3mm linesort layout --fit-to-margins 2cm --landscape a4 write output.svg show
+vpype read skyscrapers.svg splitall linesimplify --tolerance 0.3mm reloop --tolerance 0.3mm linemerge --tolerance 0.3mm linesort layout --fit-to-margins 0.5cm --landscape a4 write output.svg show
+vpype show output.svg 
+vpype --help
+vpype read skyscrapers.svg splitall linesimplify --tolerance 0.3mm reloop --tolerance 0.3mm linemerge --tolerance 0.3mm linesort layout --fit-to-margins 0.5cm --landscape a4 write output.svg show
+vpype read output.svg splitall linesimplify --tolerance 0.3mm reloop --tolerance 0.3mm linemerge --tolerance 0.3mm linesort layout --landscape a4 write output2.svg show
+pip install vpype-gcode
+vpype read output.svg gwrite --profile gcode output.gcode
+vpype read output.svg gwrite --profile gcode.my_own_plotter output.gcode
+vpype read output.svg gwrite --profile gwrite.my_own_plotter output.gcode
+vpype read output.svg gwrite --profile my_own_plotter output.gcode
+vpype read output.svg gwrite --profile my_own_plotter output.gcode
+vpype read output.svg gwrite --profile my_own_plotter output.gcode
+vpype read output2.svg splitall linesimplify --tolerance 0.3mm reloop --tolerance 0.3mm linemerge --tolerance 0.3mm linesort layout --landscape a4 write output3.svg show
+vpype read contact2.svg splitall linesimplify --tolerance 0.3mm reloop --tolerance 0.3mm linemerge --tolerance 0.3mm linesort layout --landscape a4 write contact3.svg show
+vi ~/.vpype.toml 
+vpype read contact3.svg gwrite --profile custom001 output.gcode
+vpype read cloth.svg splitall linesimplify --tolerance 0.3mm reloop --tolerance 0.3mm linemerge --tolerance 0.3mm linesort layout --landscape a4 write cloth2.svg show
+vpype read cloth2.svg gwrite --profile custom001 output.gcode 
+vpype read pi.svg splitall linesimplify --tolerance 0.3mm reloop --tolerance 0.3mm linemerge --tolerance 0.3mm linesort layout --landscape a4 write pi2.svg show
+vpype read pi.svg splitall linesimplify --tolerance 0.3mm reloop --tolerance 0.3mm linemerge --tolerance 0.3mm linesort layout --landscape a4 write pi2.svg show
+vpype read skyscrapers.svg splitall linesimplify --tolerance 0.3mm reloop --tolerance 0.3mm linemerge --tolerance 0.3mm linesort layout --fit-to-margins 0.5cm --landscape a4 write output.svg showvi README.md 
+vpype read skyscrapers.svg splitall linesimplify --tolerance 0.3mm reloop --tolerance 0.3mm linemerge --tolerance 0.3mm linesort layout --fit-to-margins 0.5cm --landscape a4 write output.svg show
+vpype read pi.svg splitall linesimplify --tolerance 0.3mm reloop --tolerance 0.3mm linemerge --tolerance 0.3mm linesort layout --fit-to-margins 0.5cm --landscape a4 write pi2.svg show
+vpype read pi2.svg gwrite --profile custom001 output.gcode 
+vpype read circles.svg splitall linesimplify --tolerance 0.8mm reloop --tolerance 0.8mm linemerge --tolerance 0.8mm linesort layout --fit-to-margins 0.5cm --landscape a4 write circles2.svg 
+vpype read circles2.svg gwrite --profile custom001 output.gcode 
+vpype read squigglyja.svg splitall linesimplify --tolerance 0.2mm reloop --tolerance 0.2mm linemerge --tolerance 0.2mm linesort layout --fit-to-margins 0.2cm --landscape a4 write squigglyja2.svg 
+vpype read squigglyja.svg splitall linesimplify --tolerance 0.4mm reloop --tolerance 0.4mm linemerge --tolerance 0.4mm linesort layout --fit-to-margins 0.5cm --landscape a4 write squigglyja2.svg show
+vpype read squigglyja.svg splitall linesimplify --tolerance 0.2mm reloop --tolerance 0.2mm linemerge --tolerance 0.2mm linesort layout --fit-to-margins 0.2cm --landscape a4 write squigglyja2.svg show
+vpype read squigglyja2.svg gwrite --profile custom001 output.gcode 
+vpype read squigglyja.svg gwrite --profile custom001 output.gcode 
+vpype read rt.svg splitall linesimplify --tolerance 0.2mm reloop --tolerance 0.2mm linemerge --tolerance 0.2mm linesort layout --fit-to-margins 0.5cm --landscape a4 write rt2.svg show
+vpype read rt2.svg gwrite --profile custom001 output.gcode 
+vpype read val.svg splitall linesimplify --tolerance 0.4mm reloop --tolerance 0.4mm linemerge --tolerance 0.4mm linesort layout --fit-to-margins 0.5cm --landscape a4 write val2.svg show
+vpype read val.svg splitall linemerge linesort layout --fit-to-margins 0.5cm --landscape a4 write val2.svg show
+vpype read val2.svg gwrite --profile custom001 output.gcode 
+vpype read val.svg splitall linemerge linesort layout --fit-to-margins 0.5cm --landscape a4 write val2.svg show
+vpype read val2.svg gwrite --profile custom001 output.gcode 
+vpype read wind.svg splitall linesimplify --tolerance 0.4mm reloop --tolerance 0.4mm linemerge --tolerance 0.4mm linesort layout --fit-to-margins 0.5cm --landscape a4 write wind2.svg show
+vpype read wind2.svg gwrite --profile custom001 output.gcode 
+vpype read mountains.svg splitall linesimplify --tolerance 0.4mm reloop --tolerance 0.4mm linemerge --tolerance 0.4mm linesort layout --fit-to-margins 0.5cm --landscape a4 write mountains2.svg show
+vpype read mountains2.svg gwrite --profile custom001 output.gcode 
+vpype read mountains.svg linesort layout --fit-to-margins 0.25cm --landscape a4 write mountains2.svg show
+vpype read mountains2.svg gwrite --profile custom001 output.gcode 
+vpype read lopte.svg splitall linesimplify --tolerance 0.4mm reloop --tolerance 0.4mm linemerge --tolerance 0.4mm linesort layout --fit-to-margins 0.5cm --landscape a4 write lopte2.svg show
+vpype read lopte2.svg gwrite --profile custom001 output.gcode 
+vpype read rainier.svg splitall linesimplify --tolerance 0.2mm reloop --tolerance 0.2mm linemerge --tolerance 0.2mm linesort layout --fit-to-margins 0.2cm --landscape a4 write rainier2.svg show
+vpype read rainier2.svg gwrite --profile custom001 output.gcode 
+vpype read mandalanova.svg splitall linesimplify --tolerance 0.8mm reloop --tolerance 0.8mm linemerge --tolerance 0.8mm linesort layout --fit-to-margins 0.2cm --landscape a4 write mandalanova2.svg show
+vpype read mandalanova2.svg gwrite --profile custom001 output.gcode 
+vpype read modulo.svg splitall linesimplify --tolerance 0.8mm reloop --tolerance 0.8mm linemerge --tolerance 0.8mm linesort layout --fit-to-margins 0.2cm --landscape a4 write modulo2.svg show
+vpype read cellular3d.svg splitall linesimplify --tolerance 0.8mm reloop --tolerance 0.8mm linemerge --tolerance 0.8mm linesort layout --fit-to-margins 0.2cm --landscape a4 write cellular3d2.svg show
+vpype read cellular3d.svg linesimplify --tolerance 0.8mm reloop --tolerance 0.8mm linemerge --tolerance 0.8mm linesort layout --fit-to-margins 0.2cm --landscape a4 write cellular3d2.svg show
+vpype read cellular3d.svg reloop --tolerance 0.8mm linemerge --tolerance 0.8mm linesort layout --fit-to-margins 0.2cm --landscape a4 write cellular3d2.svg show
+vpype read cellular3d.svg linemerge --tolerance 0.8mm linesort layout --fit-to-margins 0.2cm --landscape a4 write cellular3d2.svg show
+vpype read cellular3d.svg linesort layout --fit-to-margins 0.2cm --landscape a4 write cellular3d2.svg show
+vpype read cellular3d.svg layout --fit-to-margins 0.2cm --landscape a4 write cellular3d2.svg show
+vpype read rainier2.svg splitall linesimplify --tolerance 0.8mm reloop --tolerance 0.8mm linemerge --tolerance 0.8mm linesort layout --fit-to-margins 0.2cm --landscape a4 write shapes2.svg show
+vpype read shapes.svg linesimplify --tolerance 0.8mm reloop --tolerance 0.8mm linemerge --tolerance 0.8mm linesort layout --fit-to-margins 0.2cm --landscape a4 write shapes2.svg show
+vpype read boxes.svg splitall linesimplify --tolerance 0.8mm reloop --tolerance 0.8mm linemerge --tolerance 0.8mm linesort layout --fit-to-margins 0.2cm --landscape a4 write boxes2.svg show
+vpype read rainier2.svg gwrite --profile custom001 output.gcode 
+vpype read lopte2.svg gwrite --profile custom001 output.gcode 
+vpype  read input.svg  linemerge --tolerance 0.1mm  linesort  write output.svg
+vpype read wavy.svg linemerge --tolerance 0.2mm  linesort  write wavy2.svg
+vpype read wavy.svg linemerge --tolerance 0.3mm  linesort  write wavy2.svg
+vpype read diff.svg linemerge --tolerance 0.3mm  linesort  write diff2.svg
+vpype read automata.svg linemerge --tolerance 0.3mm  linesort  write automata2.svg
+vpype read rainier.svg linemerge --tolerance 0.3mm  linesort  write rainier2.svg 
+vpype read lopte.svg linemerge --tolerance 0.8mm linesort write --page-size a4 --center lopte2.svg
+vpype read contact.svg linemerge --tolerance 0.3mm linesort write --page-size a4 --center contact2.svg
+vpype read pi.svg linemerge --tolerance 0.3mm linesort write --page-size a4 --center pi2.svg
+vpype read skyscrapers.svg show --colorful
+pip install vpype[all]
+vpype read skyscrapers.svg show --colorful
+vpype read input.svg show --colorful --page-format a4
+vpype read skyscrapers.svg show --colorful --page-format a4
+vpype show --help
+vpype read skyscrapers.svg linemerge --tolerance 0.3mm linesort write --page-format a4 --landscape --center skyscrapers2.svg
+vpype read skyscrapers.svg linemerge --tolerance 0.3mm linesort write --format a4 --landscape --center skyscrapers2.svg
+vpype read skyscrapers.svg write --page-format a4 --center output.svg
+vi ~/.vpype.toml
+cat ~/.vpype.toml 
+vi ~/.vpype.toml 
+vi ~/.vpype.toml 
+cat ~/.bash_history | grep vpype
